@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400,500,600,700&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --heading-font:'Playfair Display', serif;
+    --gray-1: #333333;
+    --gray-2: #4F4F4F;
+    --gray-3: #828282;
+    --gray-4: #BDBDBD ;
+
+    --font-200: 0.5rem;
+    --font-300: 0.75rem;
+    --font-400: 1rem;
+    --font-500: 1.25rem;
+    --font-600: 1.5rem;
+    --font-700: 2rem;
+
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif ;
+    background: #FFF;
+    color: #000;
+}
+
+p{
+    max-inline-size: 590px;
+    line-height: 150%;
+}
+
+h3{
+    color: var(--gray-1);
+    font-family: var(--heading-font);
+    font-size: var(--font-600);
+    font-weight: 700;
+}
+
+h4{
+    color: var(--gray-1);
+    font-family: var(--heading-font);
+    font-size: var(--font-500);
+    font-style: italic;
+    font-weight: 500;
+}
+
+strong{
+    font-weight: 700;
+}
+
+label{
+    max-inline-size: 590px;
+}
+
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+header{
+    width: 100%;
+   
+}
+
+header h1{
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    font-weight: 700;
+
+}
+
+.sub__header{
+    display: flex;
+    margin: 0;
+    align-items: baseline;
+    
+}
+
+.sub__header p{
+    margin-left: 12px;
+    color: var(--gray-2);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+
+} 
+.header__image img{
+    margin-top: 18px;
+    border-radius: 12px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* INGREDIENTS */
+
+.ingredients__checkbox{
+    display: flex;
+    align-items: baseline;
+    margin-top: 14px;
+}
+
+
+
+.ingredients__checkbox label{
+    margin-left: 12px;
+    color: var(--gray-1);
+    line-height: 25px; /* 156.25% */
+    font-weight: 400;
+    
+}
+
+
+.ingredients__checkbox label span{
+    font-style: italic;
+    font-weight: 500;
+}
+
+.ingredients__card{
+    max-width: 216px;
+    max-height: 367px; 
+    display: grid;
+    gap: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    padding: 50px 40px;
+    
+}
+
+.card__box{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    
+}
+
+.card__details{
+    margin-left: 12px;
+}
+
+.card__box .material-symbols-outlined{
+    font-size: var(--font-600);
+    color: var(--gray-2);
+}
+
+.card__box .local_dining{
+    color: #F2994A;
+}
+
+.card__details p, h5{
+    margin: 0;
+}
+
+.card__details h5{
+    color: var(--gray-4);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.card__details p{
+    color: var(--gray-1);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.ingredients .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:880px){
+    .container{
+        padding: 12px 24px;
+    }
+    .ingredients .container{
+        flex-direction: column;
+    }
+    .ingredients__right{
+        order: -1;
+    }
+    .ingredients__card{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 100%;
+        box-shadow: none;
+        padding: 0;
+        gap: 12px;
+    }
+
+  
+
+    .ingredients__left{
+        margin-top: 30px
+    }
+}
+/* 
+Change font size to rem 
+create a font variable for responsiveness */
+
+/* INSTRUCTIONS */
+.instructions__list{
+    display: grid;
+    gap: 24px;
+}
+
+
+.instructions__list .list{
+    display: flex;
+   
+    
+}
+
+.list p{
+    margin: 0;
+    margin-left: 12px;
+}
+
+.list .number{
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #F2994A;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family:var(--heading-font);
+    font-size: 24px;
+    font-weight: 700; 
+}
+
+.source__link{
+    color: var(--gray-4);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;   
+    
+}
+
+footer p{
+    
+    text-align: center;
+    color: #A9A9A9;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;  
+}
+
+footer span{
+    font-weight: 700;
+    text-decoration: underline;
+
+}
+
+
+@media only screen and (max-width:465px){
+
+    .ingredients__card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+        box-shadow: none;
+        padding: 0;
+        gap: 12px;
+    }
+
+    .yields{
+        grid-column: 1 / span 3;
+    }
+
+    header h1{
+        font-size: var(--font-600);
+    }
+
+    .sub__header p{
+        font-size: var(--font-300);
+    }
+
+    h3{
+        font-size: 1.125rem;
+    }
+    h4{
+        font-size: var(--font-400);
+    }
+
+    .ingredients__checkbox label{
+        font-size: 14px;
+    }
+
+    
+    .card__box .material-symbols-outlined{
+        font-size: 17px;
+    }
+    .card__details h5{
+        font-size: 8px;
+    }
+    .card__details p{
+    font-size: 10px;
+    }
+
+    .ingredients__checkbox{
+        margin-top: 12px;
+    }
+    
+}
